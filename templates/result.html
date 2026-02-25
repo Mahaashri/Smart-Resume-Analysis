@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Result</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: linear-gradient(to right, #ff512f, #dd2476);
+            color: white;
+            padding: 40px;
+        }
+
+        .box {
+            background: white;
+            color: black;
+            padding: 20px;
+            border-radius: 15px;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        ul {
+            list-style-type: square;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Detected Role: {{ role|upper }}</h2>
+<h2>Resume Match Score: {{ score }}%</h2>
+
+<div class="box">
+    <h3>Missing Skills</h3>
+
+    {% for category, skills in missing.items() %}
+        {% if skills %}
+            <h4>{{ category }}</h4>
+            <ul>
+                {% for skill in skills %}
+                    <li>{{ skill }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endfor %}
+</div>
+
+</body>
+</html>

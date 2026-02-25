@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Resume Analyzer</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: linear-gradient(to right, #1e3c72, #2a5298);
+            color: white;
+            text-align: center;
+            padding: 50px;
+        }
+
+        form {
+            background: white;
+            color: black;
+            padding: 30px;
+            border-radius: 15px;
+            width: 50%;
+            margin: auto;
+        }
+
+        input, textarea {
+            width: 90%;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 8px;
+        }
+
+        button {
+            background: #2a5298;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #1e3c72;
+        }
+    </style>
+</head>
+<body>
+
+<h2>🚀 AI Resume Analyzer</h2>
+
+<form action="/analyze" method="post" enctype="multipart/form-data">
+    <input type="file" name="resume" required><br>
+    <textarea name="jd" rows="8" placeholder="Paste Job Description Here"></textarea><br>
+    <button type="submit">Analyze Resume</button>
+</form>
+
+</body>
+</html>
